@@ -16,7 +16,7 @@ class Oddbox < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.1/odd-box-x86_64-unknown-linux-gnu"
-      sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      sha256 "2b78cb2f3b36271f24af069ecf74daad878626e660a365ffd08e1a8e94267611"
     end
   end
 
