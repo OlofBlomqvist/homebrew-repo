@@ -1,22 +1,22 @@
 class Oddbox < Formula
   desc "odd-box - reverse proxy server"
   homepage "https://github.com/OlofBlomqvist/odd-box"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.1/odd-box-aarch64-apple-darwin"
-      sha256 "84cf54eabc004c7f17d40214afe5a4714cbb4035fea76895ac522693fc565578"
+      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.2/odd-box-aarch64-apple-darwin"
+      sha256 "cb26e099e0039cee511021b9d484836fb1052fc769581fbbd588bd90773e80b5"
     else
-      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.1/odd-box-x86_64-apple-darwin"
-      sha256 "6cd020b799df58b79ff6d36bc6747ead4123e27373d16fb58e3dd58cb679a576"
+      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.2/odd-box-x86_64-apple-darwin"
+      sha256 "5f3dd1db1fdafa81034216e2e96953951aa236d6a261896f473a25e6f03c42dd"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.1/odd-box-x86_64-unknown-linux-gnu"
-      sha256 "2b78cb2f3b36271f24af069ecf74daad878626e660a365ffd08e1a8e94267611"
+      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.2/odd-box-x86_64-unknown-linux-gnu"
+      sha256 "a6d93a40ace36fe4ebddbb8df8ece24c2db97850e275b527672f5863c410ba02"
     end
   end
 
