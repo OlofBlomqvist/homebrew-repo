@@ -23,12 +23,12 @@ class Oddbox < Formula
   def install
     if OS.mac?
       if Hardware::CPU.arm?
-        bin.install "odd-box-aarch64-apple-darwin" => "oddbox"
+        bin.install "odd-box-aarch64-apple-darwin" => "odd-box"
       else
-        bin.install "odd-box-x86_64-apple-darwin" => "oddbox"
+        bin.install "odd-box-x86_64-apple-darwin" => "odd-box"
       end
     elsif OS.linux?
-      bin.install "odd-box-x86_64-unknown-linux-gnu" => "oddbox"
+      bin.install "odd-box-x86_64-unknown-linux-gnu" => "odd-box"
     end
   end
 
