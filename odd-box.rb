@@ -1,4 +1,4 @@
-class Oddbox < Formula
+class OddBox < Formula
   desc "odd-box - reverse proxy server"
   homepage "https://github.com/OlofBlomqvist/odd-box"
   version "0.1.8"
@@ -33,7 +33,6 @@ class Oddbox < Formula
   end
 
   test do
-    assert_match "Usage", shell_output("#{bin}/oddbox --help", 1)
+    assert_match "Usage", shell_output("#{bin}/odd-box --help", 1)
   end
 end
-
