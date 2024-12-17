@@ -1,7 +1,7 @@
 class OddBox < Formula
   desc "odd-box - reverse proxy server"
   homepage "https://github.com/OlofBlomqvist/odd-box"
-  version "0.1.8"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.arm?
