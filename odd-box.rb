@@ -5,18 +5,18 @@ class OddBox < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.8/odd-box-aarch64-apple-darwin"
-      sha256 "54d215690094a17230b53de14224f90b7c958729c4162b760d3fffdb36d0cbd8"
+      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.10/odd-box-aarch64-apple-darwin"
+      sha256 "d20c037b1dbb5ecce666856ec5910e782a681c13c0e24ac3802be13406e39a8d"
     else
-      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.8/odd-box-x86_64-apple-darwin"
-      sha256 "7160cd010a0b3d254786e3f7dc4ad06476fa2a995c108342bb5eacdab207b62b"
+      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.10/odd-box-x86_64-apple-darwin"
+      sha256 "6d6ffdbe2c886500faeb68f719d11aa86a2df3b09b5de269a5b04140e75041e3"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.8/odd-box-x86_64-unknown-linux-gnu"
-      sha256 "7cf39d995a9820fe1f27df9f50180b88a46f92031dd17a1f1e3297602d0f797c"
+      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v0.1.10/odd-box-x86_64-unknown-linux-musl"
+      sha256 "78f6784e1f9b812f968296dadc541e6d4e7745ef57e0097cac7a04631569b04e"
     end
   end
 
@@ -28,7 +28,7 @@ class OddBox < Formula
         bin.install "odd-box-x86_64-apple-darwin" => "odd-box"
       end
     elsif OS.linux?
-      bin.install "odd-box-x86_64-unknown-linux-gnu" => "odd-box"
+      bin.install "odd-box-x86_64-unknown-linux-musl" => "odd-box"
     end
   end
 
