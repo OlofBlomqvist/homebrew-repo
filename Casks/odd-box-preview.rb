@@ -12,5 +12,6 @@ cask "odd-box-preview" do
   desc "odd-box reverse proxy server (preview)"
   homepage "https://github.com/OlofBlomqvist/odd-box"
 
-  binary "odd-box", target: "odd-box-preview"
+  app "Odd Box.app"
+  binary "#{appdir}/Odd Box.app/Contents/MacOS/odd-box", target: "odd-box-preview"
 end

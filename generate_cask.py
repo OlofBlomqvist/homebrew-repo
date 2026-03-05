@@ -40,9 +40,10 @@ def render_cask(
     desc: str,
     homepage: str,
 ) -> str:
-    binary_clause = f'binary "{binary_name}"'
+    binary_path = "#{appdir}/Odd Box.app/Contents/MacOS/odd-box"
+    binary_clause = f'binary "{binary_path}"'
     if binary_target != binary_name:
-        binary_clause = f'binary "{binary_name}", target: "{binary_target}"'
+        binary_clause = f'binary "{binary_path}", target: "{binary_target}"'
 
     return f'''cask "{name}" do
   version "{version}"
@@ -58,6 +59,7 @@ def render_cask(
   desc "{desc}"
   homepage "{homepage}"
 
+  app "Odd Box.app"
   {binary_clause}
 end
 '''
