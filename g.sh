@@ -2,7 +2,7 @@
 set -euo pipefail
 
 usage() {
-  cat <<'EOF'
+  cat <<'USAGE'
 Usage: ./g.sh <version> [--preview] [--os macos|linux|all]
 
 Examples:
@@ -12,7 +12,7 @@ Examples:
 Notes:
 - This generator writes new files under Formula/ and Casks/.
 - macOS generation requires the arm64 DMG uploaded in the release assets.
-EOF
+USAGE
 }
 
 if [[ $# -eq 0 ]]; then
@@ -119,16 +119,28 @@ if [[ "${GENERATE_LINUX}" == true ]]; then
   fi
 
   echo "[linux] Generating Formula/${NAME}.rb..."
-  python3 generate_formula.py \
-    --name "${NAME}" \
-    --version "${VERSION}" \
-    --desc "${DESC}" \
-    --homepage "https://github.com/OlofBlomqvist/odd-box" \
-    --linux-x86-url "${LINUX_X86_URL}" \
-    "${auto_linux_arm_args[@]}" \
-    --binary-name "odd-box" \
-    --binary-target "${FORMULA_BINARY_TARGET}" \
-    --output-file "Formula/${NAME}.rb"
+  if [[ ${#auto_linux_arm_args[@]} -gt 0 ]]; then
+    python3 generate_formula.py \
+      --name "${NAME}" \
+      --version "${VERSION}" \
+      --desc "${DESC}" \
+      --homepage "https://github.com/OlofBlomqvist/odd-box" \
+      --linux-x86-url "${LINUX_X86_URL}" \
+      "${auto_linux_arm_args[@]}" \
+      --binary-name "odd-box" \
+      --binary-target "${FORMULA_BINARY_TARGET}" \
+      --output-file "Formula/${NAME}.rb"
+  else
+    python3 generate_formula.py \
+      --name "${NAME}" \
+      --version "${VERSION}" \
+      --desc "${DESC}" \
+      --homepage "https://github.com/OlofBlomqvist/odd-box" \
+      --linux-x86-url "${LINUX_X86_URL}" \
+      --binary-name "odd-box" \
+      --binary-target "${FORMULA_BINARY_TARGET}" \
+      --output-file "Formula/${NAME}.rb"
+  fi
 fi
 
 if [[ "${GENERATE_MACOS}" == true ]]; then

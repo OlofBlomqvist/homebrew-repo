@@ -77,6 +77,15 @@ def render_formula(
   homepage "{homepage}"
   version "{version}"
 
+  # Homebrew on macOS requires an active URL spec during formula parsing.
+  # odd-box formula builds are Linux-only, so this macOS spec is intentionally
+  # marked unsupported via `depends_on :linux`.
+  on_macos do
+    url "{linux_x86_url}"
+    sha256 "{linux_x86_sha}"
+    depends_on :linux
+  end
+
   on_linux do
 {arm_block}    on_intel do
       url "{linux_x86_url}"
