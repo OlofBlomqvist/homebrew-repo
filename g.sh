@@ -85,12 +85,14 @@ if [[ "${PREVIEW}" == true ]]; then
   NAME="odd-box-preview"
   DESC="odd-box reverse proxy server (preview)"
   FORMULA_BINARY_TARGET="odd-box-preview"
+  CASK_APP_TARGET="Odd Box Preview.app"
   CASK_BINARY_TARGET="odd-box-preview"
   CHANNEL_SUFFIX=" (preview)"
 else
   NAME="odd-box"
   DESC="odd-box reverse proxy server"
   FORMULA_BINARY_TARGET="odd-box"
+  CASK_APP_TARGET="Odd Box.app"
   CASK_BINARY_TARGET="odd-box"
   CHANNEL_SUFFIX=""
 fi
@@ -157,6 +159,8 @@ if [[ "${GENERATE_MACOS}" == true ]]; then
       --name "${NAME}" \
       --version "${VERSION}" \
       --arm-url "${MAC_ARM_DMG_URL}" \
+      --app-name "Odd Box.app" \
+      --app-target "${CASK_APP_TARGET}" \
       --binary-name "odd-box" \
       --binary-target "${CASK_BINARY_TARGET}" \
       --desc "${DESC}" \
