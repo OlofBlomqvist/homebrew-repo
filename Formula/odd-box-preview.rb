@@ -2,7 +2,6 @@ class OddBoxPreview < Formula
   desc "odd-box reverse proxy server (preview)"
   homepage "https://github.com/OlofBlomqvist/odd-box"
   version "2.0.0-Preview2"
-
   # Homebrew on macOS requires an active URL spec during formula parsing.
   # odd-box formula builds are Linux-only, so this macOS spec is intentionally
   # marked unsupported via `depends_on :linux`.
