@@ -100,7 +100,7 @@ fi
 TAG="v${VERSION}"
 BASE_URL="https://github.com/OlofBlomqvist/odd-box/releases/download/${TAG}"
 
-LINUX_X86_URL="${BASE_URL}/odd-box-x86_64-unknown-linux-musl"
+LINUX_X86_URL="${BASE_URL}/odd-box-x86_64-unknown-linux-gnu"
 LINUX_ARM_URL="${BASE_URL}/odd-box-aarch64-unknown-linux-musl"
 MAC_ARM_DMG_URL="${BASE_URL}/odd-box-aarch64-apple-darwin.dmg"
 
