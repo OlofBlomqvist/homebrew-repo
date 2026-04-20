@@ -1,4 +1,4 @@
-cask "odd-box-preview" do
+cask "odd-box" do
   version "2.0.0-Preview5"
 
   on_arm do
@@ -8,19 +8,19 @@ cask "odd-box-preview" do
 
   depends_on arch: :arm64
 
-  name "Odd Box Preview"
-  desc "odd-box reverse proxy server (preview)"
+  name "Odd Box"
+  desc "odd-box reverse proxy server"
   homepage "https://github.com/OlofBlomqvist/odd-box"
 
-  app "Odd Box.app", target: "Odd Box Preview.app"
-  binary "#{appdir}/Odd Box Preview.app/Contents/MacOS/odd-box", target: "odd-box-preview"
+  app "Odd Box.app"
+  binary "#{appdir}/Odd Box.app/Contents/MacOS/odd-box"
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-drs", "com.apple.quarantine", "#{appdir}/Odd Box Preview.app"]
+                   args: ["-drs", "com.apple.quarantine", "#{appdir}/Odd Box.app"]
     system_command "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister",
-                   args: ["-f", "#{appdir}/Odd Box Preview.app"]
+                   args: ["-f", "#{appdir}/Odd Box.app"]
     system_command "/usr/bin/mdimport",
-                   args: ["#{appdir}/Odd Box Preview.app"]
+                   args: ["#{appdir}/Odd Box.app"]
   end
 end
