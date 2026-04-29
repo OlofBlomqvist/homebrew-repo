@@ -20,15 +20,15 @@ class OddBoxPreview < Formula
   end
 
   def install
-    bin.install "odd-box-x86_64-unknown-linux-gnu" => "odd-box"
+    bin.install "odd-box-x86_64-unknown-linux-gnu" => "odd-box-preview"
   end
 
 
   def post_install
-    system "/bin/chmod", "755", bin/"odd-box"
+    system "/bin/chmod", "755", bin/"odd-box-preview"
   end
 
   test do
-    assert_match "odd-box", shell_output("#{bin}/odd-box --version")
+    assert_match "odd-box", shell_output("#{bin}/odd-box-preview --version")
   end
 end

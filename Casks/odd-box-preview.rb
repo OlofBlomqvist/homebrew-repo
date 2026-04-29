@@ -12,8 +12,8 @@ cask "odd-box-preview" do
   desc "odd-box reverse proxy server (preview)"
   homepage "https://github.com/OlofBlomqvist/odd-box"
 
-  app "Odd Box.app", target: "Odd Box Preview.app"
-  binary "#{appdir}/Odd Box Preview.app/Contents/MacOS/odd-box"
+  app "Odd Box Preview.app"
+  binary "#{appdir}/Odd Box Preview.app/Contents/MacOS/odd-box", target: "odd-box-preview"
 
   postflight do
     system_command "/usr/bin/xattr",
