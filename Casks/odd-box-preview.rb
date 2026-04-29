@@ -13,7 +13,7 @@ cask "odd-box-preview" do
   homepage "https://github.com/OlofBlomqvist/odd-box"
 
   app "Odd Box.app", target: "Odd Box Preview.app"
-  binary "#{appdir}/Odd Box Preview.app/Contents/MacOS/odd-box", target: "odd-box-preview"
+  binary "#{appdir}/Odd Box Preview.app/Contents/MacOS/odd-box"
 
   postflight do
     system_command "/usr/bin/xattr",

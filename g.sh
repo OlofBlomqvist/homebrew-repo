@@ -84,9 +84,9 @@ done
 if [[ "${PREVIEW}" == true ]]; then
   NAME="odd-box-preview"
   DESC="odd-box reverse proxy server (preview)"
-  FORMULA_BINARY_TARGET="odd-box-preview"
+  FORMULA_BINARY_TARGET="odd-box"
   CASK_APP_TARGET="Odd Box Preview.app"
-  CASK_BINARY_TARGET="odd-box-preview"
+  CASK_BINARY_TARGET="odd-box"
   CHANNEL_SUFFIX=" (preview)"
 else
   NAME="odd-box"
