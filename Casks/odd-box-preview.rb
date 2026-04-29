@@ -3,7 +3,7 @@ cask "odd-box-preview" do
 
   on_arm do
     url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-Preview6/odd-box-aarch64-apple-darwin.dmg"
-    sha256 "e4c4b53c958ae4be99907c0cfa86570bc077677cd53fede633025b91bc00ed99"
+    sha256 "7ea4cec84f6f087bb9bf6480f92eecba23d5e0d1d34d07b259e00a09411d4d9d"
   end
 
   depends_on arch: :arm64
