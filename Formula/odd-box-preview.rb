@@ -8,14 +8,14 @@ class OddBoxPreview < Formula
   # marked unsupported via `depends_on :linux`.
   on_macos do
     url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC1/odd-box-x86_64-unknown-linux-gnu"
-    sha256 "ef6245d3d5bd7f4b8111dfb61c039408cbdcaf2aecf43be666d882ff42540659"
+    sha256 "eb6be96d2f2fe66e7b80848804f8ab8a991f12660c97f61fe47255ec133c81f9"
     depends_on :linux
   end
 
   on_linux do
     on_intel do
       url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC1/odd-box-x86_64-unknown-linux-gnu"
-      sha256 "ef6245d3d5bd7f4b8111dfb61c039408cbdcaf2aecf43be666d882ff42540659"
+      sha256 "eb6be96d2f2fe66e7b80848804f8ab8a991f12660c97f61fe47255ec133c81f9"
     end
   end
 
