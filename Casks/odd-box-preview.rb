@@ -1,9 +1,9 @@
 cask "odd-box-preview" do
-  version "2.0.0-RC1"
+  version "2.0.0-RC2"
 
   on_arm do
-    url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC1/odd-box-aarch64-apple-darwin.dmg"
-    sha256 "73aa5f575ce203d1af8bac7a7b421592abdeb92139302af5c2f2783b92b93621"
+    url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC2/odd-box-aarch64-apple-darwin.dmg"
+    sha256 "ca2cf719bd9b1ed321537d17be292fa3316e658f32cb594fd3c3b2ed98093092"
   end
 
   depends_on arch: :arm64
