@@ -1,21 +1,21 @@
 class OddBoxPreview < Formula
   desc "odd-box reverse proxy server (preview)"
   homepage "https://github.com/OlofBlomqvist/odd-box"
-  version "2.0.0-RC2"
+  version "2.0.0-RC3"
 
   # Homebrew on macOS requires an active URL spec during formula parsing.
   # odd-box formula builds are Linux-only, so this macOS spec is intentionally
   # marked unsupported via `depends_on :linux`.
   on_macos do
-    url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC2/odd-box-x86_64-unknown-linux-gnu"
-    sha256 "34def243185308cfb49f788aa38a2c3ae45e96ac89303942d8f9a5fc4c4bc65b"
+    url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC3/odd-box-x86_64-unknown-linux-gnu"
+    sha256 "f6c1706d6270f3e28675ae3bf83cc219c161f775bd8cb264e11777fc253ef7e1"
     depends_on :linux
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC2/odd-box-x86_64-unknown-linux-gnu"
-      sha256 "34def243185308cfb49f788aa38a2c3ae45e96ac89303942d8f9a5fc4c4bc65b"
+      url "https://github.com/OlofBlomqvist/odd-box/releases/download/v2.0.0-RC3/odd-box-x86_64-unknown-linux-gnu"
+      sha256 "f6c1706d6270f3e28675ae3bf83cc219c161f775bd8cb264e11777fc253ef7e1"
     end
   end
 
